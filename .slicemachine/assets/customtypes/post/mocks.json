@@ -1,0 +1,21 @@
+{
+  "id": "09256677-9471-4a3f-be2b-7b95d0d6e6fa",
+  "uid": "fuga-rerum-officia",
+  "type": "post",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "Generate open-source functionalities",
+        "spans": []
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Pariatur ut exercitation aute est.",
+        "spans": []
+      }
+    ]
+  }
+}

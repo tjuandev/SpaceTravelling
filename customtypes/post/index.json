@@ -12,6 +12,13 @@
           "placeholder": ""
         }
       },
+      "author": {
+        "type": "Text",
+        "config": {
+          "label": "Author",
+          "placeholder": ""
+        }
+      },
       "title": {
         "type": "StructuredText",
         "config": {
@@ -19,6 +26,15 @@
           "placeholder": "",
           "allowTargetBlank": true,
           "single": "heading1"
+        }
+      },
+      "subtitle": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Subtitle",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading3"
         }
       },
       "content": {

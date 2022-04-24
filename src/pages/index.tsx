@@ -2,9 +2,13 @@ import { GetStaticProps } from 'next';
 
 import * as PrismicH from '@prismicio/helpers';
 import { Query, PrismicDocument } from '@prismicio/types';
-import { useState } from 'react';
-import { getPrismicClient } from '../services/prismic';
 
+import { useState } from 'react';
+import format from 'date-fns/format';
+
+import { FiCalendar, FiUser } from 'react-icons/fi';
+
+import { getPrismicClient } from '../services/prismic';
 import commonStyles from '../styles/common.module.scss';
 import styles from './home.module.scss';
 
@@ -78,8 +82,14 @@ export default function Home({
               <p>{post.data.subtitle}</p>
 
               <div className={styles.metadata}>
-                <time>{post.first_publication_date}</time>
-                {post.data.author}
+                <time>
+                  <FiCalendar size="1.25rem" />
+                  {format(new Date(post.first_publication_date), 'dd LLL yyyy')}
+                </time>
+                <span>
+                  <FiUser size="1.25rem" />
+                  {post.data.author}
+                </span>
               </div>
             </article>
           );

@@ -1,4 +1,6 @@
 .container {
+  margin-bottom: 5rem;
+
   section {
     display: flex;
     flex-direction: column;
@@ -40,5 +42,19 @@
 
   svg {
     margin-right: 0.5rem;
+  }
+}
+
+.showMoreButton {
+  font-size: 1.125rem;
+  color: var(--highlight-color);
+
+  background: transparent;
+  border: 0;
+
+  width: fit-content;
+
+  &:disabled {
+    cursor: not-allowed;
   }
 }

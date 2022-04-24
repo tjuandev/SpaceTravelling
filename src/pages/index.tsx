@@ -5,8 +5,9 @@ import { Query, PrismicDocument } from '@prismicio/types';
 import { useState } from 'react';
 import { getPrismicClient } from '../services/prismic';
 
-/* import commonStyles from '../styles/common.module.scss';
-import styles from './home.module.scss'; */
+import commonStyles from '../styles/common.module.scss';
+import styles from './home.module.scss';
+
 interface Post {
   uid?: string;
   first_publication_date: string | null;
@@ -68,28 +69,30 @@ export default function Home({
   };
 
   return (
-    <>
-      {posts.map(post => {
-        return (
-          <article key={post.uid}>
-            <h2>{post.data.title}</h2>
-            <p>{post.data.subtitle}</p>
+    <main className={`${styles.container} ${commonStyles.alignMaxWidth}`}>
+      <section>
+        {posts.map(post => {
+          return (
+            <article key={post.uid} className={styles.postContainer}>
+              <h2>{post.data.title}</h2>
+              <p>{post.data.subtitle}</p>
 
-            <div>
-              <time>{post.first_publication_date}</time>
-              {post.data.author}
-            </div>
-          </article>
-        );
-      })}
-      <button
-        disabled={!nextPage}
-        onClick={() => getNextPage(next_page)}
-        type="button"
-      >
-        oi
-      </button>
-    </>
+              <div className={styles.metadata}>
+                <time>{post.first_publication_date}</time>
+                {post.data.author}
+              </div>
+            </article>
+          );
+        })}
+        <button
+          disabled={!nextPage}
+          onClick={() => getNextPage(next_page)}
+          type="button"
+        >
+          oi
+        </button>
+      </section>
+    </main>
   );
 }
 

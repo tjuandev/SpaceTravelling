@@ -8,6 +8,7 @@ import format from 'date-fns/format';
 
 import { FiCalendar, FiUser } from 'react-icons/fi';
 
+import Link from 'next/link';
 import { getPrismicClient } from '../services/prismic';
 import commonStyles from '../styles/common.module.scss';
 import styles from './home.module.scss';
@@ -79,7 +80,9 @@ export default function Home({
         {posts.map(post => {
           return (
             <article key={post.uid} className={styles.postContainer}>
-              <h2>{post.data.title}</h2>
+              <Link href={`/post/${post.uid}`}>
+                <h2>{post.data.title}</h2>
+              </Link>
               <p>{post.data.subtitle}</p>
 
               <div className={styles.metadata}>

@@ -12,6 +12,12 @@
   h2 {
     font-size: 1.75rem;
     margin-bottom: 0.5rem;
+    transition: color 0.25s ease;
+  }
+
+  h2:hover {
+    cursor: pointer;
+    color: var(--highlight-color);
   }
 
   p {

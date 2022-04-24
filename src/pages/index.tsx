@@ -12,6 +12,7 @@ import { getPrismicClient } from '../services/prismic';
 import commonStyles from '../styles/common.module.scss';
 import styles from './home.module.scss';
 
+const PAGE_SIZE = 4;
 interface Post {
   uid?: string;
   first_publication_date: string | null;
@@ -94,13 +95,15 @@ export default function Home({
             </article>
           );
         })}
-        <button
-          disabled={!nextPage}
-          onClick={() => getNextPage(next_page)}
-          type="button"
-        >
-          oi
-        </button>
+        {nextPage && (
+          <button
+            className={styles.showMoreButton}
+            onClick={() => getNextPage(next_page)}
+            type="button"
+          >
+            Carregar mais posts
+          </button>
+        )}
       </section>
     </main>
   );
@@ -112,7 +115,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const prismic = getPrismicClient({});
 
   const postsResponse = await prismic.getByType('post', {
-    pageSize: 5,
+    pageSize: PAGE_SIZE,
   });
 
   const posts = adaptPrismicResponse(postsResponse);

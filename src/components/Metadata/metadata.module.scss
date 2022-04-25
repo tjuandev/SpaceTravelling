@@ -2,10 +2,7 @@
   color: var(--metadata-color);
 
   display: flex;
-
-  time {
-    margin-right: 1.5rem;
-  }
+  gap: 1.5rem;
 
   time,
   span {

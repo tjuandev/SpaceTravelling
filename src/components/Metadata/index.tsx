@@ -8,7 +8,7 @@ interface MetadataProps {
     data: {
       author: string;
     };
-    estimatedReadingTime?: number;
+    estimatedReadingTime?: string;
   };
 }
 

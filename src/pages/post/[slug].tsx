@@ -54,8 +54,14 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const prismic = getPrismicClient({});
   const posts = await prismic.getByType('post');
 
+  const paths = posts?.results.map(post => ({
+    params: { slug: post.uid },
+  }));
+
+  const firstFivePaths = paths.slice(0, 5);
+
   return {
-    paths: [],
+    paths: firstFivePaths,
     fallback: 'blocking',
   };
 };

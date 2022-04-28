@@ -3,6 +3,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { PrismicRichText } from '@prismicio/react';
 import * as PrismicH from '@prismicio/helpers';
 import Metadata from 'components/Metadata';
+import Image from 'next/image';
 import commonStyles from 'styles/common.module.scss';
 import { getPrismicClient } from '../../services/prismic';
 
@@ -14,6 +15,7 @@ interface Post {
   data: {
     author: string;
   };
+  bannerUrl: string;
   estimatedReadingTime: string;
   content: [];
 }
@@ -24,13 +26,24 @@ interface PostProps {
 
 export default function Post({ post }: PostProps): React.ReactElement {
   return (
-    <section className={commonStyles.alignMaxWidth}>
-      <article className={styles.container}>
-        <h1>{post.title}</h1>
-        <Metadata post={post} />
-        <PrismicRichText field={post.content} />
-      </article>
-    </section>
+    <>
+      {post?.bannerUrl && (
+        <Image
+          width={1440}
+          height={400}
+          src={post?.bannerUrl}
+          layout="responsive"
+          alt="banner"
+        />
+      )}
+      <section className={commonStyles.alignMaxWidth}>
+        <article className={styles.container}>
+          <h1>{post.title}</h1>
+          <Metadata post={post} />
+          <PrismicRichText field={post.content} />
+        </article>
+      </section>
+    </>
   );
 }
 
@@ -69,6 +82,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     },
     content: data.content,
     estimatedReadingTime,
+    bannerUrl: data?.banner.banner.url,
   };
 
   return {

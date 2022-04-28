@@ -1,27 +1,45 @@
 {
-  "id": "72ccb153-2d50-4cce-8887-3791890e970d",
-  "uid": "natus-qui-modi",
+  "id": "bdac153b-cc9a-4130-8e25-0f4bd77952b5",
+  "uid": "occaecati-impedit-accusamus",
   "type": "post",
   "data": {
-    "author": "morph best-of-breed convergence",
+    "banner": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a?w=900&h=500&fit=crop",
+      "banner": {
+        "dimensions": {
+          "width": 1440,
+          "height": 400
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a?w=1440&h=400&fit=crop"
+      }
+    },
+    "author": "generate collaborative synergies",
     "title": [
       {
         "type": "heading1",
-        "text": "Redefine enterprise bandwidth",
+        "text": "Matrix virtual initiatives",
         "spans": []
       }
     ],
     "subtitle": [
       {
         "type": "heading3",
-        "text": "Mesh scalable vortals",
+        "text": "Integrate rich architectures",
         "spans": []
       }
     ],
     "content": [
       {
         "type": "paragraph",
-        "text": "Consequat enim non id sunt sint ea culpa ex enim nulla amet occaecat minim. In qui minim magna sunt elit anim ex nostrud. Proident magna tempor reprehenderit nisi pariatur.",
+        "text": "Anim ad pariatur amet duis culpa consequat cupidatat commodo labore dolore laborum.",
         "spans": []
       }
     ]

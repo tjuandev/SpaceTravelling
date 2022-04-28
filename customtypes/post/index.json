@@ -12,6 +12,20 @@
           "placeholder": ""
         }
       },
+      "banner": {
+        "type": "Image",
+        "config": {
+          "label": "Banner",
+          "constraint": {},
+          "thumbnails": [
+            {
+              "name": "banner",
+              "width": 1440,
+              "height": 400
+            }
+          ]
+        }
+      },
       "author": {
         "type": "Text",
         "config": {

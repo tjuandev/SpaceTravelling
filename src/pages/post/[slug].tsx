@@ -32,6 +32,7 @@ export default function Post({ post }: PostProps): React.ReactElement {
           width={1440}
           height={400}
           src={post?.bannerUrl}
+          quality={100}
           layout="responsive"
           alt="banner"
         />

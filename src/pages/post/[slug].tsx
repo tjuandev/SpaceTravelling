@@ -15,7 +15,7 @@ interface Post {
   data: {
     author: string;
   };
-  bannerUrl: string;
+  banner: { url: string };
   estimatedReadingTime: string;
   content: [];
 }
@@ -27,11 +27,11 @@ interface PostProps {
 export default function Post({ post }: PostProps): React.ReactElement {
   return (
     <>
-      {post?.bannerUrl && (
+      {post?.banner.url && (
         <Image
           width={1440}
           height={400}
-          src={post?.bannerUrl}
+          src={post?.banner.url}
           quality={100}
           layout="responsive"
           alt="banner"
@@ -81,15 +81,19 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     allTextsFromContent.split('').length / 200
   )} Minutes`;
 
+  console.log('aaa', JSON.stringify(data, null, 2));
+
   const post: Post = {
     first_publication_date,
-    title: PrismicH.asText(data.title),
+    title: data.title[0].text,
     data: {
       author: data.author,
     },
     content: data.content,
     estimatedReadingTime,
-    bannerUrl: data?.banner.banner.url,
+    banner: {
+      url: data?.banner?.banner?.url,
+    },
   };
 
   return {

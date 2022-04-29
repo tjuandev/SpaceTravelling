@@ -111,7 +111,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const posts = adaptPrismicResponse(postsResponse);
 
-  const nextPageUrl = `${postsResponse.next_page}&access_token=${process.env.NEXT_PUBLIC_PRISMIC_ACCESS_TOKEN}`;
+  const nextPageUrl = `${postsResponse.next_page}&access_token=${process.env.PRISMIC_ACCESS_TOKEN}`;
 
   return {
     props: {

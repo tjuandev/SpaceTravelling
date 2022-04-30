@@ -40,13 +40,15 @@ const adaptPrismicResponse: AdaptPrismicResponse = ({ results: posts }) => {
       uid: post.uid,
       first_publication_date: post.first_publication_date,
       data: {
-        title: PrismicH.asText(post.data?.title),
-        subtitle: PrismicH.asText(post.data?.subtitle),
+        title: post.data?.title[0].text,
+        subtitle: post.data?.subtitle[0].text,
         author: post.data?.author,
       },
     };
   });
 };
+
+type SetNextPageUrl = (newUrl: string) => void;
 
 export default function Home({
   postsPagination,
@@ -56,12 +58,14 @@ export default function Home({
   const [nextPage, setNextPage] = useState(next_page);
   const [posts, setPosts] = useState(results);
 
+  const setNextPageUrl: SetNextPageUrl = newUrl => setNextPage(newUrl);
+
   const getNextPage: GetNextPage = async route => {
     try {
       const response = await fetch(route);
       const newPosts = await response.json();
 
-      setNextPage(newPosts.next_page);
+      setNextPageUrl(newPosts.next_page);
 
       return setPosts(prevState => [
         ...prevState,

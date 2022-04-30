@@ -1,1 +1,3 @@
-### Estou ciente de que a aplicação não roda 100% dos testes. Acabou que eu não entendi como resolvia a maioria dos testes, e também alguns pediam informações exatas de posts que eu não usei, os posts que eu usei foram aleatórios da internet. Sem contar que com a atualização das dependências do projeto alguns testes bugaram e dão erros sem sentido em seus arquivos, tentei resolver, mas sem sucesso. No módulo de testes irei aprofundar melhor sobre isso e trazer códigos com melhores qualidades...
+# SpaceTravelling
+
+Aplicação de blogs usando PrismicCMS e NextJS. 

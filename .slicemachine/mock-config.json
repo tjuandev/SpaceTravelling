@@ -12,6 +12,12 @@
           "patternType": "PARAGRAPH",
           "blocks": 1
         }
+      },
+      "subtitle": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
       }
     }
   }

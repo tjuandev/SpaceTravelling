@@ -1,0 +1,21 @@
+.metadata {
+  color: var(--metadata-color);
+
+  display: flex;
+  gap: 1.5rem;
+
+  time,
+  span {
+    font-size: 0.875rem;
+  }
+
+  time,
+  span {
+    display: flex;
+    align-items: center;
+  }
+
+  svg {
+    margin-right: 0.5rem;
+  }
+}

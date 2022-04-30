@@ -1,1 +1,41 @@
-// TODO
+.container {
+  margin: 5rem auto;
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
+.postContainer {
+  h2 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    transition: color 0.25s ease;
+  }
+
+  h2:hover {
+    cursor: pointer;
+    color: var(--highlight-color);
+  }
+
+  p {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.showMoreButton {
+  font-size: 1.125rem;
+  color: var(--highlight-color);
+
+  background: transparent;
+  border: 0;
+
+  width: fit-content;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}

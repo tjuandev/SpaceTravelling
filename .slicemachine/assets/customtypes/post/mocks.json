@@ -1,19 +1,45 @@
 {
-  "id": "09256677-9471-4a3f-be2b-7b95d0d6e6fa",
-  "uid": "fuga-rerum-officia",
+  "id": "bdac153b-cc9a-4130-8e25-0f4bd77952b5",
+  "uid": "occaecati-impedit-accusamus",
   "type": "post",
   "data": {
+    "banner": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a?w=900&h=500&fit=crop",
+      "banner": {
+        "dimensions": {
+          "width": 1440,
+          "height": 400
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a?w=1440&h=400&fit=crop"
+      }
+    },
+    "author": "generate collaborative synergies",
     "title": [
       {
         "type": "heading1",
-        "text": "Generate open-source functionalities",
+        "text": "Matrix virtual initiatives",
+        "spans": []
+      }
+    ],
+    "subtitle": [
+      {
+        "type": "heading3",
+        "text": "Integrate rich architectures",
         "spans": []
       }
     ],
     "content": [
       {
         "type": "paragraph",
-        "text": "Pariatur ut exercitation aute est.",
+        "text": "Anim ad pariatur amet duis culpa consequat cupidatat commodo labore dolore laborum.",
         "spans": []
       }
     ]

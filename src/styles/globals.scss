@@ -4,4 +4,44 @@
   padding: 0;
 }
 
-// TODO
+:root {
+  --text-light: #f4f4f4;
+  --background-dark: #1a1d23;
+  --metadata-color: #bbbbbb;
+  --highlight-color: #FF57B2;
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+body,
+input,
+textarea,
+select,
+button {
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  color: var(--text-light);
+  background: var(--background-dark);
+
+  font-smooth: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

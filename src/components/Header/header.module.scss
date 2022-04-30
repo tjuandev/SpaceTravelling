@@ -1,1 +1,7 @@
-// TODO
+.container {
+  height: 5rem;
+
+  > span {
+    cursor: pointer;
+  }
+}
